@@ -1,0 +1,40 @@
+                                                
+Downeast Plumbing Pros Demo Software License (Custom)
+
+Copyright (c) 2026 Downeast Plumbing Pros Demo
+
+1. Definitions
+   "Software" means the source code and any files in this repository, including any modified versions.
+   "Licensee" means the individual or entity that accepts this License and uses the Software.
+   "Business Deployment" means a single production deployment where the Software is used to operate the Licensee's own business website (including the Licensee's content, branding, phone numbers, and marketing copy).
+
+2. License Grant (Permitted Use)
+   Subject to the terms of this License, Licensee is granted a non-exclusive, non-transferable right to:
+   a) clone, download, and modify the Software;
+   b) build and deploy the Software; and
+   c) operate the Software,
+   solely for Licensee's own business website, under a Business Deployment.
+
+   A staging/preview environment directly associated with the same Business Deployment is also permitted.
+
+3. Restrictions (Prohibited Use)
+   Licensee may not:
+   a) sell, rent, lease, sublicense, or otherwise provide the Software (or a substantially similar derivative) to any third party;
+   b) offer the Software as a template, product, SaaS, agency package, or managed service to other unrelated businesses;
+   c) create a business model where the Software is resold or repackaged to serve multiple unrelated third parties;
+   d) remove or obscure any copyright, trademark, or license notices.
+
+   Contractors and employees may work with the Software only on behalf of the Licensee and only for the Licensee's own Business Deployment.
+
+4. Donations (Voluntary)
+   Donations are voluntary and do not expand or change the rights granted by this License.
+
+5. Termination
+   If Licensee breaches this License, the rights granted here terminate automatically. Sections 4 and 6 survive termination.
+
+6. Disclaimer of Warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+7. Limitation of Liability
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

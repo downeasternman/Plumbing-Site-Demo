@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## License & permitted use
+
+This repository is provided under the terms in `LICENSE` (custom, source-available).
+
+In plain English:
+- You may use, modify, and deploy the site for your own plumbing business website (and an optional preview/staging environment).
+- You may not sell, sublicense, or offer the site (or a substantially similar derivative) to other unrelated businesses as a template/product/managed service.
+
+See `LICENSE` for the exact terms.
+
+## Donations (optional)
+
+If you find this demo helpful, you can support ongoing improvements here:
+- `https://github.com/sponsors/downeasternman`
+

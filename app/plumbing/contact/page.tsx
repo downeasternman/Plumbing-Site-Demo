@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import ContactForm from "@/components/forms/ContactForm";
 import CTAButton from "@/components/ui/CTAButton";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { plumbingContactConfig } from "@/lib/contactFormConfigs";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     "Contact Downeast Plumbing Pros for service requests and 24/7 emergency plumbing in Washington County, Maine.",
 };
 
-export default function ContactPage() {
+export default function PlumbingContactPage() {
   return (
     <div className="site-container py-16">
       <SectionHeading
@@ -24,21 +25,18 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold text-primary">Contact Details</h2>
           <div className="mt-4 space-y-3 text-sm text-muted">
             <p>
-              <span className="font-semibold text-primary">Phone:</span>{" "}
-              207-555-0147
+              <span className="font-semibold text-primary">Phone:</span> 207-555-0147
             </p>
             <p>
-              <span className="font-semibold text-primary">Email:</span>{" "}
-              service@downeastplumbingpros.com
+              <span className="font-semibold text-primary">Email:</span> service@downeastplumbingpros.com
             </p>
             <p>
-              <span className="font-semibold text-primary">Hours:</span> 24/7
-              Emergency Service, Mon-Sat Regular Scheduling
+              <span className="font-semibold text-primary">Hours:</span> 24/7 Emergency Service, Mon-Sat
+              Regular Scheduling
             </p>
             <p>
-              <span className="font-semibold text-primary">Service Area:</span>{" "}
-              Washington County including Machias, Calais, Eastport, and
-              Milbridge.
+              <span className="font-semibold text-primary">Service Area:</span> Washington County including
+              Machias, Calais, Eastport, and Milbridge.
             </p>
           </div>
 
@@ -46,21 +44,15 @@ export default function ContactPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-100">
               Need Immediate Help?
             </p>
-            <p className="mt-2 text-lg font-bold">
-              Call our 24/7 emergency line now.
-            </p>
-            <CTAButton
-              href="tel:207-555-0147"
-              variant="secondary"
-              className="mt-4"
-            >
+            <p className="mt-2 text-lg font-bold">Call our 24/7 emergency line now.</p>
+            <CTAButton href="tel:207-555-0147" variant="secondary" className="mt-4">
               Call 207-555-0147
             </CTAButton>
           </div>
         </aside>
 
         <Suspense fallback={null}>
-          <ContactForm />
+          <ContactForm config={plumbingContactConfig} />
         </Suspense>
       </div>
     </div>

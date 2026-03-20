@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Emergency plumbing, water heater service, drain cleaning, leak repairs, and more in Washington County, Maine.",
 };
 
+const BASE = "/plumbing";
+
 const services = [
   {
     title: "Emergency Plumbing",
@@ -49,22 +51,19 @@ const services = [
   },
 ];
 
-export default function ServicesPage() {
+export default function PlumbingServicesPage() {
   return (
     <div className="site-container py-16">
       <section className="rounded-2xl bg-primary p-8 text-white md:p-10">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-200">
           Full-Service Plumbing
         </p>
-        <h1 className="mt-3 text-4xl font-bold md:text-5xl">
-          Plumbing solutions built for Maine homes
-        </h1>
+        <h1 className="mt-3 text-4xl font-bold md:text-5xl">Plumbing solutions built for Maine homes</h1>
         <p className="mt-4 max-w-2xl text-blue-100">
-          We combine fast response and durable workmanship so repairs hold up in
-          every season.
+          We combine fast response and durable workmanship so repairs hold up in every season.
         </p>
         <div className="mt-6">
-          <CTAButton href="/contact">Schedule Service</CTAButton>
+          <CTAButton href={`${BASE}/contact`}>Schedule Service</CTAButton>
         </div>
       </section>
 
@@ -76,20 +75,15 @@ export default function ServicesPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+            <ServiceCard key={service.title} {...service} basePath={BASE} />
           ))}
         </div>
       </section>
 
       <section className="mt-14 rounded-2xl border border-border bg-white p-8">
-        <SectionHeading
-          eyebrow="How It Works"
-          title="A simple 3-step process"
-        />
+        <SectionHeading eyebrow="How It Works" title="A simple 3-step process" />
         <ol className="mt-6 grid gap-4 text-sm text-muted md:grid-cols-3">
-          <li className="rounded-lg border border-border p-4">
-            1) Call or request service online.
-          </li>
+          <li className="rounded-lg border border-border p-4">1) Call or request service online.</li>
           <li className="rounded-lg border border-border p-4">
             2) We diagnose and explain options with clear pricing.
           </li>
@@ -100,18 +94,16 @@ export default function ServicesPage() {
       </section>
 
       <section className="mt-14">
-        <FinancingSection />
+        <FinancingSection contactHref={`${BASE}/contact`} />
       </section>
 
       <section className="mt-14 rounded-2xl bg-slate-100 p-8">
-        <h2 className="text-3xl font-bold text-primary">
-          Need help choosing the right repair?
-        </h2>
+        <h2 className="text-3xl font-bold text-primary">Need help choosing the right repair?</h2>
         <p className="mt-3 max-w-2xl text-muted">
           Talk with our team for honest guidance and next-step recommendations.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <CTAButton href="/contact">Contact Us</CTAButton>
+          <CTAButton href={`${BASE}/contact`}>Contact Us</CTAButton>
           <CTAButton href="tel:207-555-0147" variant="secondary">
             Call 207-555-0147
           </CTAButton>

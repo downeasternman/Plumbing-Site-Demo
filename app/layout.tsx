@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import EmergencyBanner from "@/components/site/EmergencyBanner";
-import Footer from "@/components/site/Footer";
-import Header from "@/components/site/Header";
+import DemoOwnerStrip from "@/components/demos/DemoOwnerStrip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,11 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Downeast Plumbing Pros | Washington County, Maine",
-    template: "%s | Downeast Plumbing Pros",
+    default: "Trade Site Demo Suite",
+    template: "%s | Trade Site Demos",
   },
   description:
-    "Trusted residential plumbing service in Washington County, Maine. Call for fast repairs, honest pricing, and 24/7 emergency response.",
+    "Demo websites for trades. Pick a vertical, view the live demo, and contact the builder to make it yours.",
 };
 
 export default function RootLayout({
@@ -34,11 +32,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <EmergencyBanner />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="flex min-h-full flex-col pb-14">
+        {children}
+        <DemoOwnerStrip />
       </body>
     </html>
   );

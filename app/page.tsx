@@ -1,171 +1,95 @@
 import type { Metadata } from "next";
-import FinancingSection from "@/components/sections/FinancingSection";
-import ServiceCard from "@/components/sections/ServiceCard";
-import TestimonialCard from "@/components/sections/TestimonialCard";
-import CTAButton from "@/components/ui/CTAButton";
-import SectionHeading from "@/components/ui/SectionHeading";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Plumber in Washington County, Maine",
+  title: "Demo Suite",
   description:
-    "Need a reliable local plumber? Downeast Plumbing Pros provides fast service, clear pricing, and 24/7 emergency support across Washington County.",
+    "Live demo websites for trades: plumbing, HVAC, septic, electrical. Contact the builder to customize for your business.",
 };
 
-const homeServices = [
+const demos = [
   {
-    title: "24/7 Emergency Plumbing",
-    description:
-      "Burst pipe or sudden leak? Our local team responds quickly to protect your home and restore service.",
-    serviceSlug: "emergency-plumbing",
+    href: "/plumbing",
+    title: "Plumbing",
+    subtitle: "Washington County, Maine",
+    tone: "from-primary to-primary-strong",
+    blurb: "Emergency strip, service cards, financing, conversion CTAs.",
   },
   {
-    title: "Water Heater Repair & Install",
-    description:
-      "From no-hot-water calls to efficient new systems, we fix and replace tank and tankless units.",
-    serviceSlug: "water-heater-repair-replacement",
+    href: "/hvac",
+    title: "HVAC & Heat Pumps",
+    subtitle: "Coastal Maine comfort",
+    tone: "from-sky-600 to-cyan-700",
+    blurb: "Cool cyan palette, tune-up focus, efficiency messaging.",
   },
   {
-    title: "Drain Cleaning",
-    description:
-      "Recurring clogs and slow drains are cleared safely with tools designed for long-lasting flow.",
-    serviceSlug: "drain-cleaning",
+    href: "/septic",
+    title: "Septic & Pumping",
+    subtitle: "Rural & coastal properties",
+    tone: "from-stone-700 to-emerald-900",
+    blurb: "Earthy slate + green, inspection and pumping trust cues.",
   },
   {
-    title: "Leak Detection & Pipe Repair",
-    description:
-      "We find hidden leaks fast, repair damaged lines, and help prevent expensive water damage.",
-    serviceSlug: "leak-repair",
-  },
-  {
-    title: "Fixture Upgrades",
-    description:
-      "Installations for faucets, toilets, showers, and disposals with clean workmanship and code compliance.",
-    serviceSlug: "fixture-installations",
-  },
-  {
-    title: "Well Pump & Pressure Issues",
-    description:
-      "Rural property water pressure problems diagnosed and corrected for stable, reliable daily use.",
-    serviceSlug: "well-pump-pressure",
+    href: "/electric",
+    title: "Electrician",
+    subtitle: "Same-day service",
+    tone: "from-zinc-900 to-zinc-800",
+    blurb: "High-contrast charcoal + safety yellow accents.",
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "They arrived fast during a winter pipe emergency and got us back up the same day.",
-    name: "Sarah T.",
-    location: "Machias",
-  },
-  {
-    quote:
-      "Clear pricing, respectful technicians, and no surprises. Best plumbing service we have used.",
-    name: "James R.",
-    location: "Calais",
-  },
-  {
-    quote:
-      "Our water heater replacement was smooth and professional from first call to final walkthrough.",
-    name: "Erin M.",
-    location: "Milbridge",
-  },
-];
-
-export default function Home() {
+export default function SuiteHomePage() {
   return (
-    <div>
-      <section className="bg-gradient-to-br from-primary to-primary-strong py-16 text-white md:py-24">
-        <div className="site-container">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-200">
-            Washington County Trusted Plumber
+    <div className="min-h-screen bg-slate-50">
+      <header className="border-b border-slate-200 bg-white">
+        <div className="site-container py-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+            Trade site demo suite
           </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
-            Fast, dependable plumbing service when your home needs it most.
+          <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
+            Live demos you can sell
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-blue-100 md:text-lg">
-            Downeast Plumbing Pros helps homeowners in Machias, Calais,
-            Eastport, Milbridge, and nearby communities with honest pricing,
-            skilled technicians, and 24/7 emergency response.
+          <p className="mt-4 max-w-2xl text-lg text-slate-600">
+            Pick a vertical. Each route is a full mini-site (Home, Services, About, Contact) with
+            different layout and styling so prospects see real variety—not the same template recolored.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <CTAButton href="/contact">Schedule Service</CTAButton>
-            <CTAButton href="tel:207-555-0147" variant="secondary">
-              Call 24/7: 207-555-0147
-            </CTAButton>
-          </div>
-          <div className="mt-10 grid gap-4 text-sm md:grid-cols-3">
-            <p className="rounded-md bg-white/10 p-4">Licensed & insured team</p>
-            <p className="rounded-md bg-white/10 p-4">Clear upfront recommendations</p>
-            <p className="rounded-md bg-white/10 p-4">Emergency dispatch day or night</p>
-          </div>
         </div>
-      </section>
+      </header>
 
-      <section className="site-container py-16">
-        <SectionHeading
-          eyebrow="Plumbing Services"
-          title="High-priority repairs and everyday plumbing done right"
-          description="We focus on quick diagnosis, durable fixes, and clean workmanship so you can get back to normal fast."
-        />
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {homeServices.map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-slate-100 py-16">
-        <div className="site-container">
-          <SectionHeading
-            eyebrow="Customer Results"
-            title="Homeowners count on us for speed and peace of mind"
-            align="center"
-          />
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="site-container py-16">
-        <FinancingSection />
-      </section>
-
-      <section className="bg-warning py-12 text-white">
-        <div className="site-container flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-100">
-              Emergency Service
-            </p>
-            <p className="mt-2 text-2xl font-bold">
-              Plumbing crisis? We are on call 24/7.
-            </p>
-          </div>
-          <CTAButton
-            href="tel:207-555-0147"
-            className="bg-white text-orange-800 hover:bg-orange-100"
+      <div className="site-container grid gap-6 py-12 md:grid-cols-2">
+        {demos.map((d) => (
+          <Link
+            key={d.href}
+            href={d.href}
+            className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-slate-300 hover:shadow-md"
           >
-            Call Emergency Line
-          </CTAButton>
-        </div>
-      </section>
+            <div
+              className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${d.tone}`}
+              aria-hidden
+            />
+            <p className="text-xs font-bold uppercase tracking-wide text-slate-500">{d.subtitle}</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900 group-hover:text-accent">
+              {d.title}
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-slate-600">{d.blurb}</p>
+            <p className="mt-6 text-sm font-semibold text-accent">Open demo →</p>
+          </Link>
+        ))}
+      </div>
 
-      <section className="site-container py-16">
-        <div className="rounded-2xl bg-primary p-8 text-white md:p-10">
-          <h2 className="text-3xl font-bold">Book trusted local plumbing today</h2>
-          <p className="mt-3 max-w-2xl text-blue-100">
-            Tell us what is going on and we will help you schedule fast.
-          </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <CTAButton href="/contact">Get a Free Estimate</CTAButton>
-            <CTAButton href="/services" variant="secondary">
-              Explore Services
-            </CTAButton>
-          </div>
-        </div>
-      </section>
+      <footer className="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
+        <p>
+          Source and license:{" "}
+          <a
+            href="https://github.com/downeasternman/Plumbing-Site-Demo"
+            className="font-medium text-accent underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub repository
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
